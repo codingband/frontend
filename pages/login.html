@@ -1,0 +1,59 @@
+<section class="header" ng-include="'pages/includes/header.html?='+v"></section>
+<section class="main">
+	<div class="container">
+		<form name="form" class="css-form" novalidate>
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+				<div class="box-form">
+					<img class="img-responsive inline-block mb-1" alt="" src="images/logo-2.png">
+					<div class="fs-6 mb-3">Use your existing credentials to login</div>
+					<div class="validation-summary-errors text-danger" ng-show="ErrorLogin">
+						<ul>
+							<li>{{ErrorLogin}}</li>
+						</ul>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 mb-2">
+							<input type="email" class="form-control input-sl" placeholder="Email" ng-model="Customer.Email" name="uEmail" required="">
+						    <div ng-show="form.$submitted || form.uEmail.$touched" class="text-danger">
+						      <span ng-show="form.uEmail.$error.required">This field is required.</span>
+						      <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
+						    </div>
+						</div>
+						<div class="col-sm-6 mb-2">
+							<input type="password" class="form-control input-sl" placeholder="Password" ng-model="Customer.Password" name="uPassword" required="">
+						    <div ng-show="form.$submitted || form.uPassword.$touched" class="text-danger">
+						      <span ng-show="form.uPassword.$error.required">This field is required.</span>
+						    </div>
+						</div>
+					</div>
+					<div class="row">
+                        <div class="col-sm-6">
+                            <input type="checkbox" value="true" name="RememberMe">
+                            <label for="RememberMe" class="checkbox inline-block">Remember me?</label>
+                        </div>
+                        <div class="col-sm-6 mb-2">
+                            
+                        </div>
+                    </div>
+					<div class="text-right">
+                        <a href="#/forgot-password" class="link-w fs-1 mt-2 inline-block pull-left"><b>Forgot your Password?</b></a>
+                        &emsp;
+                        <button class="btn btn-a btn-sl xs-width-100p" type="submit" ng-click="login(Customer)">LOGIN</button> 
+                    </div>
+				</div>
+			</div>
+		</div>
+		</form>
+		
+		<div class="fs-10 fg-w fw-light text-center mt-6 mb-4 hidden-xs">
+			Get from 10% Off on each Pack Services Today!
+		</div>
+	</div>
+	
+	<div class="bar-publicity bar-publicity-slider mb-3" ng-include="'pages/includes/slider.html?='+v"></div>
+	
+	<div class="overflow-hidden" ng-include="'pages/includes/steps.html?='+v"></div>
+	
+</section><!-- main -->
+<section class="footer" ng-include="'pages/includes/footer.html?='+v"></section>

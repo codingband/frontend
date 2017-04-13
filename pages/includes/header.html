@@ -1,0 +1,95 @@
+<div class="container">
+
+
+	<nav class="navbar navbar-sa">
+	
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#scheduler-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <span ng-show="isLoged" class="badge badge-notification pull-right mt-2 mr-2 hidden-sm hidden-md hidden-lg">1</span>
+	      <a class="navbar-brand" href="#/home" ng-click=""><img alt="" src="images/logo.png"></a>
+	    </div>
+	
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="scheduler-navbar-collapse-1">
+	      <ul class="nav navbar-nav navbar-right" ng-class="{'hidden-xs': isLoged}">
+	        <li ng-class="{active: path == '/create-new-account'}"><a href="#/create-new-account">Create New Account</a></li>
+	        <li ng-hide="isLoged" ng-class="{active: path == '/login'}"><a href="#/login">Login</a></li>
+	        <li ng-show="isLoged" class="dropdown active">
+	        	<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+	        		Logged in as {{ Customer.FirstName  }} {{ Customer.LastName }}
+	        		<span class="caret"></span>
+	        	</a>
+				<ul class="dropdown-menu">
+					<li><a href="#/profile">Profile</a></li>
+					<li><a href="javascript:void(0)" ng-click="logout()">Logout</a></li>
+				</ul>
+	        </li>
+	        <li ng-show="isLoged" class="active "><a href="javascript:void(0)">Notifications <span class="badge badge-notification">1</span></a></li>
+	        <li><a href="#/special-offers-step-1" class="bordered">Special Offers</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right hidden-sm hidden-md hidden-lg" ng-class="{'hidden-xs': !isLoged}">
+	      	<li>
+	      		<a href="#/create-new-account">
+	      			<span class="icon-step icon-step-1"></span>
+	      			<span class="step-name">
+					1. Choose your <br>
+					needs category
+				</span>
+      			</a>
+	      	</li>
+	      	<li>
+	      		<a href="#/create-new-account">
+	      			<span class="icon-step icon-step-2"></span>
+	      			<span class="step-name">
+					2. Describe your<br>
+					technical problem
+				</span>
+      			</a>
+	      	</li>
+	      	<li>
+	      		<a href="#/create-new-account">
+	      			<span class="icon-step icon-step-3"></span>
+	      			<span class="step-name">
+					3. Coordinate your<br>
+					best time schedule
+				</span>
+      			</a>
+	      	</li>
+	      	<li>
+	      		<a href="#/create-new-account">
+	      			<span class="icon-step icon-step-4"></span>
+	      			<span class="step-name">
+					4. Get the best<br>
+					technical service
+				</span>
+      			</a>
+	      	</li>
+	      	<li>
+	      		<a href="#/">
+	      			<span class="icon-menu-item fa fa-cog" aria-hidden="true"></span>
+	      			<span class="step-name">
+						Personal Settings
+					</span>
+      			</a>
+	      	</li>
+	      	<li>
+	      		<a href="javascript:void(0)" ng-click="logout()">
+	      			<span class="icon-menu-item fa fa-sign-out" aria-hidden="true"></span>
+	      			<span class="step-name">
+						Logout
+					</span>
+      			</a>
+	      	</li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	
+	</nav>
+
+
+</div>

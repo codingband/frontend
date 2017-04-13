@@ -1,0 +1,80 @@
+	<div style="position: fixed; top: 0; width: 100%; z-index: 100; background: #ffffff;">
+		<div class="collapse" id="map" style="padding-bottom: 20px; border-bottom: 1px solid #648BAD">
+			<div class="container">
+				<h3 class="text-center">Map</h3>
+				<div class="row">
+					<div class="col-sm-4">
+						<h4 class="pl-4">Public <a href="javascript:void(0)" ng-click="logout()" ng-show="isLoged" class="fs-1">(Logout)</a></h4>
+						<ul class="nav bs-docs-sidenav">
+						  <li>
+						  	<a href="#/" data-toggle="collapse" data-target="#map">Home</a>
+						  </li>
+						  <li>
+						  	<a href="#/login" data-toggle="collapse" data-target="#map">Login</a>
+						  </li>
+						  <li>
+						  	<a href="#/create-new-account" data-toggle="collapse" data-target="#map">Create New Account</a>
+						  </li>
+						  <li>
+						  	<a href="#/forgot-password" data-toggle="collapse" data-target="#map">Forgot Password?</a>
+						  </li>
+						  <li>
+						  	<a href="#/reset-password" data-toggle="collapse" data-target="#map">Reset Password</a>
+						  </li>
+						  
+						  <li>
+						  	<a href="emails/notification.html" target="_blank">Notification Email</a>
+						  </li>
+						  <li>
+						  	<a href="emails/reset-password.html" target="_blank">Reset Password Email</a>
+						  </li>
+						</ul>
+					</div>
+					<div class="col-sm-4">
+						<h4 class="pl-4">Private</h4>
+						<ul class="nav bs-docs-sidenav">
+						  <li><a href="#/" data-toggle="collapse" data-target="#map">Home</a></li>
+						  <li><a href="#/profile" data-toggle="collapse" data-target="#map">Profile</a></li>
+						  <li><a href="#/step-1" data-toggle="collapse" data-target="#map">1. Choose your needs category</a></li>
+						  <li><a href="#/step-2" data-toggle="collapse" data-target="#map">2. Describe your technical problem</a></li>
+						  <li><a href="#/step-3" data-toggle="collapse" data-target="#map">3. Coordinate your best time schedule</a></li>
+						  <li><a href="#/step-4" data-toggle="collapse" data-target="#map">4. Get the best technical service</a></li>
+						</ul>
+						<h5 class="pl-4">Special Offers</h5>
+						<ul class="nav bs-docs-sidenav">
+						  <li><a href="#/special-offers-step-1" data-toggle="collapse" data-target="#map">1. Choose your needs category</a></li>
+						  <li><a href="#/special-offers-step-2" data-toggle="collapse" data-target="#map">2. Describe your technical problem</a></li>
+						  <li><a href="#/special-offers-step-3" data-toggle="collapse" data-target="#map">3. Coordinate your best time schedule</a></li>
+						  <li><a href="#/special-offers-step-4" data-toggle="collapse" data-target="#map">4. Get the best technical service</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4">
+						<h4 class="pl-4">Users</h4>
+						<table class="table fs-0">
+							<thead>
+								<tr>
+									<td>FirstName</td>
+									<td>LastName</td>
+									<td>Email</td>
+									<td>Pasword</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="customer in Customers">
+									<td>{{ customer.FirstName }}</td>
+									<td>{{ customer.LastName }}</td>
+									<td>{{ customer.Email }}</td>
+									<td>{{ customer.Password }}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="position: absolute; left:50%;">
+			<a class="btn btn-primary btn-sm" data-toggle="collapse" data-target="#map" href="javascript:void(0)" style="opacity: 0.7">
+				<span class="glyphicon glyphicon-triangle-bottom"></span>		
+			</a>
+		</div>
+	</div>

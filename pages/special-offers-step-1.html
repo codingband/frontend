@@ -1,0 +1,42 @@
+<section class="header" ng-include="'pages/includes/header.html?='+v"></section>
+<section class="main">
+
+	<div class="overflow-hidden" ng-include="'pages/includes/special-offers-steps.html?='+v" ng-init="step=1"></div>
+
+	<div class="bg-w pt-5 clearfix">
+		<div class="bg-w1">
+			<div class="container">
+				<div class="clearfix">
+					<div class="box box-step">
+						<div class="box-ratio box-ratio-step"></div>
+						<div class="box-content box-content-step">
+							<div class="cell cell-step">
+								<div class="cell-inner cell-inner-step">
+									<img alt="" src="images/icon-special-offers.png">
+								</div>
+							</div>
+						</div>
+					</div>
+					<span class="title-step">
+						Welcome to our Special Offers Section<br>
+						In here you will find coupons and discounts for our Services
+					</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="mt-6 mb-7" ng-include="'pages/includes/offers.html?='+v"></div>
+			
+			<div class="fw-light fs-1 mb-7">
+				By selecting one or more of our Offers you agree that you read and agreed to the 
+				<a href="javascript:void(0)">Terms and Conditions.</a> 
+				If you have further questions call as at <b>1 555 55555</b>
+			</div>
+		</div>
+	</div>
+	
+
+	
+</section><!-- main -->
+<section class="footer" ng-include="'pages/includes/footer.html?='+v"></section>

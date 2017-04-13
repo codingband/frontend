@@ -1,0 +1,41 @@
+<section class="header" ng-include="'pages/includes/header.html?='+v"></section>
+<section class="main">
+
+	<div class="overflow-hidden" ng-include="'pages/includes/steps.html?='+v" ng-init="step=3"></div>
+
+	<div class="bg-w pt-5 clearfix">
+		<div class="bg-w1">
+			<div class="container">
+				<div class="clearfix">
+					<div class="box box-step">
+						<div class="box-ratio box-ratio-step"></div>
+						<div class="box-content box-content-step">
+							<div class="cell cell-step">
+								<div class="cell-inner cell-inner-step">
+									HVAC<br>
+									Systems
+								</div>
+							</div>
+						</div>
+					</div>
+					<span class="title-step">
+						You have selected the following Service:<br>
+						<b>Air Conditioning Unit Installation (Non-Central)</b>
+					</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="fg-a fs-4 fw-light mt-6 mb-6">
+				Based on your information, we have these time spots available for your Service<br>
+				Please click to select one from the dates below:
+			</div>
+		</div>
+		<div class="bg-w1 mb-7" ng-include="'pages/includes/calendar.html?='+v"></div>
+	</div>
+	
+
+	
+</section><!-- main -->
+<section class="footer" ng-include="'pages/includes/footer.html?='+v"></section>

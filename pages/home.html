@@ -1,0 +1,77 @@
+<section class="header" ng-include="'pages/includes/header.html?='+v"></section>
+<section class="main">
+	<div class="container" ng-show="isLoged">
+		<div class="relative">
+			<div class="absolute width-100p">
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-6 col-sm-5 col-sm-offset-7 col-lg-4 col-lg-offset-8">
+						<div role="alert" class="alert alert-dismissible alert-notification"> 
+							<button aria-label="Close" data-dismiss="alert" class="close" type="button">
+								<span aria-hidden="true">&times;</span>
+							</button> 
+							<div class="mb-2">
+								<i class="fa fa-bell-o fs-6" aria-hidden="true"></i>
+							 	<strong>Notification:</strong><br> 
+							</div>
+							Your Work Ticket has been created. A suited Professional will be at your  provided home address by  Wednesday  November18 from 9am to 3pm
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="text-center xs-text-left fg-w" style="margin-top: 160px;">
+			<div class="fw-light fs-7 mb-4">
+				Welcome <span class="fg-a-3">{{ Customer.FirstName  }} {{ Customer.LastName }}</span><br>
+				Enjoy your account at Scheduler App<br>
+				You can start your Service Request now<br>
+			</div>
+			<div class="fs-4 mb-6 hidden-xs">
+				<img class="inline-block mr-1" alt="" src="images/icon-step-1.png">
+				<span class="inline-block text-middle">
+					1. Choose your<br>
+					needs category
+				</span>
+			</div>
+			<div class="step step-1 pointer overflow-hidden active hidden-sm hidden-md hidden-lg">
+				<span class="icon-step icon-step-1"></span>
+				<span class="step-name">
+					1. Choose your <br>
+					needs category
+				</span>
+				<span class="icon-circle icon-circle-first mb-1"></span>
+			</div>
+			
+		</div>
+		
+		<div class="fs-8 fw-light fg-w mb-4 hidden-xs text-center">
+			Select one of the Categories below and start Scheduling for<br>
+			<div class="dropdown inline-block">
+				<button class="btn btn-a dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				    {{ CurrentAddress? CurrentAddress : 'Address'}}
+				    <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu dropdown-menu-right">
+					<li ng-repeat="address in Customer.Addresses"><a href="javascript:void(0)" ng-click="setCurrentAddress(address)">{{ address }}</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+	<div class="bar-publicity mb-3" ng-include="'pages/includes/gallery.html?='+v" ng-show="isLoged"></div>
+	
+	
+	<div class="container mt-7" ng-show="!isLoged">
+		<div class="fs-10 fg-w fw-light text-center mt-6 mb-4 hidden-xs">
+			Get from 10% Off on each Pack Services Today!
+		</div>
+	</div>
+	
+	<div class="bar-publicity bar-publicity-slider mb-3" ng-include="'pages/includes/slider.html?='+v" ng-show="!isLoged"></div>
+	
+	<div class="overflow-hidden" ng-include="'pages/includes/steps.html?='+v"></div>
+	
+</section><!-- main -->
+<section class="footer" ng-include="'pages/includes/footer.html?='+v"></section>
